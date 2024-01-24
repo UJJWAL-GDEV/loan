@@ -27,7 +27,7 @@
   .container{
     flex-grow: 1;
     padding: 2em;
-    background-image: radial-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)), url('../public/banner.png');
+    background-image: radial-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .8));
     background-size: cover;
     background-position: center;
     display: flex;
@@ -49,7 +49,7 @@
     margin: 0 auto;
     border: none;
     outline: none;
-    padding: .75em 1em;
+    /* padding: .75em 1em; */
     font-size: 1em;
     letter-spacing: 1px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
@@ -61,12 +61,9 @@
   
   .sidebar{
     flex-shrink: 0;
-    overflow: auto;
+    overflow-y: auto;
   }
 
-  
-  
-  
   .sidebar-item{
     padding: .75em 1em;
     display: block;
@@ -79,22 +76,10 @@
   
   .sidebar-title{
     display: flex;
-    font-size: 1.2em;
-    justify-content: space-between;
+    font-size: 1em;
   }
-  .sidebar-title span i{
-    display: inline-block;
-    width: 1.5em;
-  }
-  .sidebar-title .toggle-btn{
-    cursor: pointer;
-    transition: transform .3s;
-  }
-  .sidebar-item.open > .sidebar-title .toggle-btn{
-    transform: rotate(180deg);
-  }
+
   .sidebar-content{
-    padding-top: .25em;
     height: 0;
     overflow: hidden;
   }
@@ -104,14 +89,8 @@
   
   .sidebar-item.plain{
     color: #fff;
+    font-size: 1em;
     text-decoration: none;
-  }
-  .sidebar-item.plain:hover{
-    text-decoration: underline;
-  }
-  .sidebar-item.plain i{
-    display: inline-block;
-    width: 1.7em;
   }
 
   input, select{
